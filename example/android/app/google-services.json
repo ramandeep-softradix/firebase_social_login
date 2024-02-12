@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "643628361415",
+    "project_id": "social-login-plugin-90bb7",
+    "storage_bucket": "social-login-plugin-90bb7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:643628361415:android:9f036dddc9adbe46ad00e2",
+        "android_client_info": {
+          "package_name": "com.softradix.socialLoginPlugin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "643628361415-cncqn7coa5hja7eu7jhma0sgi4bmk33s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQZWtrLAOPr_AgOmSJUadcG-auxgCNUro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "643628361415-cncqn7coa5hja7eu7jhma0sgi4bmk33s.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "643628361415-30b9ndqe6vq3ooipr72ooqiig125nbqo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.softradix.socialLoginPlugin"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -7,9 +7,9 @@ import 'package:social_login_plugin/model/social_login_data_model.dart';
 import 'social_login_plugin_platform_interface.dart';
 
 class SocialLoginPlugin {
-  /* Future<String?> getPlatformVersion() {
+   Future<String?> getPlatformVersion() {
     return SocialLoginPluginPlatform.instance.getPlatformVersion();
-  }*/
+  }
 
   static const _successConst = "success";
   static const _failureConst = "failure";

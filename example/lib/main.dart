@@ -79,7 +79,7 @@ class _MyAppState extends State<MyApp> {
                 print("data : ${data.toString()}");
               }),
 
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
 
               socialLoginButtonWidget(title: 'Apple', onPressed: () async{
                 var data = await _socialLoginPlugin.signInWithApple();

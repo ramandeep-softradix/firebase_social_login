@@ -1,7 +1,7 @@
-name: social_login_plugin
-description: "A new Flutter plugin project."
-version: 0.0.1
-homepage: https://github.com/parth58/Social-SignIn-Buttons
+name: firebase_social_login
+description: "A demonstration of social_login_plugin for seamless social login integration."
+version: 0.0.4
+homepage: https://github.com/ramandeep-softradix/firebase_social_login.git
 
 environment:
   sdk: '>=3.2.3 <4.0.0'

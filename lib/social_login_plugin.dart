@@ -7,8 +7,8 @@ import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
-import 'package:social_login_plugin/model/social_login_data_model.dart';
 
+import 'model/social_login_data_model.dart';
 import 'social_login_plugin_platform_interface.dart';
 
 class SocialLoginPlugin {
@@ -82,8 +82,8 @@ class SocialLoginPlugin {
       final oAuthProvider = OAuthProvider('apple.com');
 
       final mcredential = oAuthProvider.credential(
-        idToken: appleIdCredential?.identityToken,
-        accessToken: appleIdCredential?.authorizationCode,
+        idToken: appleIdCredential.identityToken,
+        accessToken: appleIdCredential.authorizationCode,
       );
 
       final userCredential =
@@ -126,7 +126,7 @@ class SocialLoginPlugin {
         User? firebaseUser = userCredential.user;
 
         return SocialLoginDataModel(
-            socialId: firebaseUser?.providerData?.first.uid ?? "",
+            socialId: firebaseUser?.providerData.first.uid ?? "",
             firebaseAuthUser: firebaseUser,
             errorMessage: _successConst,
             status: true);

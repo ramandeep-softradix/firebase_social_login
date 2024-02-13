@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:social_login_plugin/social_login_plugin.dart';
-import 'package:social_login_plugin/social_login_plugin_platform_interface.dart';
-import 'package:social_login_plugin/social_login_plugin_method_channel.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
+import 'package:social_login_plugin_example/social_login_plugin.dart';
+import 'package:social_login_plugin_example/social_login_plugin_method_channel.dart';
+import 'package:social_login_plugin_example/social_login_plugin_platform_interface.dart';
 
 class MockSocialLoginPluginPlatform
     with MockPlatformInterfaceMixin

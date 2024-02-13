@@ -16,4 +16,5 @@ class SocialLoginDataModel{
     return "{socialId: ${socialId},status: ${status},errorMessage: ${errorMessage}, firebaseAuthUser: ${firebaseAuthUser}}";
   }
 
+
 }

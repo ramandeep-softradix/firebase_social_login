@@ -1,5 +1,10 @@
+import 'dart:developer';
+
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import 'package:social_login_plugin/model/social_login_data_model.dart';
@@ -7,12 +12,16 @@ import 'package:social_login_plugin/model/social_login_data_model.dart';
 import 'social_login_plugin_platform_interface.dart';
 
 class SocialLoginPlugin {
+  Future<void>iniFirebase()async{
+    await Firebase.initializeApp();
+  }
    Future<String?> getPlatformVersion() {
     return SocialLoginPluginPlatform.instance.getPlatformVersion();
   }
 
   static const _successConst = "success";
   static const _failureConst = "failure";
+
 
   Future<SocialLoginDataModel?> signInWithGoogle() async {
     try {
@@ -46,11 +55,14 @@ class SocialLoginPlugin {
           errorMessage: _successConst,
           status: true);
     } catch (e) {
+      log("e---------->$e");
+      displayError(e);
       return SocialLoginDataModel(
           socialId: null,
           firebaseAuthUser: null,
           errorMessage: "${e.toString()}",
           status: false);
+
     }
   }
 
@@ -84,6 +96,7 @@ class SocialLoginPlugin {
           errorMessage: _successConst,
           status: true);
     } catch (e) {
+      displayError(e);
       return SocialLoginDataModel(
           socialId: null,
           firebaseAuthUser: null,
@@ -91,7 +104,6 @@ class SocialLoginPlugin {
           status: false);
     }
   }
-
 
   Future<SocialLoginDataModel?> signInWithFacebook() async {
     try {
@@ -125,7 +137,9 @@ class SocialLoginPlugin {
             errorMessage: result.message ?? _failureConst,
             status: false);
       }
-    } catch (e) {
+    }  catch (e) {
+      log("e---->${e}");
+      displayError(e.toString());
       return SocialLoginDataModel(
           socialId: null,
           firebaseAuthUser: null,
@@ -133,4 +147,16 @@ class SocialLoginPlugin {
           status: false);
     }
   }
+}
+void displayError(dynamic error) {
+  log("Error: $error");
+  Fluttertoast.showToast(
+    msg: "An error occurred: ${error.toString()}",
+    toastLength: Toast.LENGTH_SHORT,
+    gravity: ToastGravity.BOTTOM,
+    timeInSecForIosWeb: 1,
+    backgroundColor: Colors.red,
+    textColor: Colors.white,
+    fontSize: 16.0,
+  );
 }

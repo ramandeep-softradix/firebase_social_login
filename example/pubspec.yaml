@@ -1,5 +1,7 @@
 name: social_login_plugin_example
-description: "Demonstrates how to use the social_login_plugin plugin."
+description: "A demonstration of social_login_plugin for seamless social login integration."
+version: 0.0.3
+homepage: https://github.com/ramandeep-softradix/firebase_social_login.git
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -28,7 +30,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  firebase_core: ^2.24.2
+
 
 dev_dependencies:
   integration_test:

@@ -1,3 +1,3 @@
-## 0.0.1
+## 0.0.3
 
-* TODO: Describe initial release.
+* some bug fixes with validations 
